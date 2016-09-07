@@ -1,6 +1,6 @@
 var mainModule = angular.module('MyApp',[]);
 
-mainModule.controller('AppCtrl', function($scope)
+mainModule.controller('AppCtrl', ['$scope', function($scope)
 {
 	io.socket.get('/emoji', function(data)
 	{
@@ -19,4 +19,4 @@ mainModule.controller('AppCtrl', function($scope)
 		}
 	});
 	// $scope.emojiList = [{name:"foo"}];
-});
+}]);
